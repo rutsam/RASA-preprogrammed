@@ -1,0 +1,57 @@
+intents:
+- indamukanyo
+- response1
+- response2
+- response3
+
+entities:
+- answer_1
+- answer_2
+- answer_3
+- goback
+- go_to_menu
+
+slots:
+   answer_1:
+     type: categorical
+     values:
+     - 1
+     - 2
+     - 3
+     - 4
+     - 5
+     - 6
+     - 7
+   answer_2:
+     type: categorical
+     values:
+     - 0
+     - 1
+     - 2
+     - 3
+     - 4
+     - 5
+   answer_3:
+     type: categorical
+     values:
+     - 0
+     - 00
+     - 1
+     - 2
+     
+actions:
+- utter_indamukanyo
+- action_menu_1
+- action_menu_2
+- action_menu_3
+- utter_andimake_umubare_nyawo
+
+responses:
+  utter_indamukanyo:
+  - text: "Murakaza neza kuri Mbaza AI, urubuga rukugezaho"
+  utter_andimake_umubare_nyawo:
+  - text: "Andika umubare nyawo hagati ya 0 na"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
